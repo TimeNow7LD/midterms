@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>160 Years of Midterms | The Truth Hurts!</title>
+<title>160 Years of Midterms: History Held in 2026 | The Truth Hurts!</title>
 <meta name="description" content="In 37 of 41 midterms since 1858, the president's party lost ground in the House. Tap any year to see the numbers.">
-<meta property="og:title" content="160 Years of Midterms: What History Says About Tonight">
+<meta property="og:title" content="160 Years of Midterms: History Held in 2026">
 <meta property="og:description" content="In 37 of 41 midterms since 1858, the president's party lost ground in the House, under Democrats and Republicans alike.">
 <meta property="og:image" content="https://midterms.timenowdata.app/preview.png">
 <meta property="og:url" content="https://midterms.timenowdata.app/house.html">
@@ -38,13 +38,30 @@ th{color:var(--sub);font-weight:600}
 small,.fine{font-size:14px;color:var(--muted)}
 a{color:var(--blue)}
 ul{padding-left:20px;margin:0 0 14px}
+
+.hm{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;margin:12px 0}
+.t3{aspect-ratio:1;border:none;padding:0;border-radius:5px;overflow:hidden;position:relative;display:flex;cursor:pointer;min-width:0;font-family:inherit;background:var(--card)}
+.t3 .seg{height:100%}
+.t3 .D{background:#2a78d6}.t3 .R{background:#e34948}
+.t3 .P{background:repeating-linear-gradient(45deg,#d3d1c7,#d3d1c7 3px,#888780 3px,#888780 6px)}
+.t3 .lab{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-shadow:0 0 3px rgba(0,0,0,.8);pointer-events:none;line-height:1.1}
+.t3 .lab b{font-size:12px}.t3 .lab i{font-style:normal;font-size:10px;opacity:.95}
+.t3.fl::after{content:"";position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 0 1.5px #141413}
+.t3.sel{outline:3px solid var(--ink);outline-offset:1px}
+.lg2{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--sub);margin:8px 0}
+.lg2 span{display:flex;align-items:center;gap:6px}
+.lg2 .sw{margin:0;flex:none;position:relative}
+#hinfo{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;min-height:96px;color:var(--sub)}
+#hinfo b{color:var(--ink)}
+.stats3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
 </style>
 </head>
 <body>
 <main>
 <p class="brand">The Truth Hurts! · 7 Levels Deep</p>
-<h1>160 years of midterms: what history says about tonight</h1>
-<p class="lead">Since 1858, the president's party has lost ground in the House in 37 of 41 midterm elections. It happens to Democrats and Republicans alike.</p>
+<h1>160 years of midterms: history held in 2026</h1>
+<p class="fine" style="margin:-4px 0 14px"><b>2026 results are in</b> · Unofficial until states certify them in December 2026 · Last updated November 15, 2026</p>
+<p class="lead">From 1858 through 2022, the president's party lost ground in the House in 37 of 41 midterms, under Democrats and Republicans alike. In 2026 it happened again: President Trump's party lost about 47 seats, by preliminary count.</p>
 
 <div class="stats">
 <div class="stat"><b>37 of 41</b><span>midterms where the president's party lost House share</span></div>
@@ -53,13 +70,31 @@ ul{padding-left:20px;margin:0 0 14px}
 <div class="stat"><b>&minus;9.9 pts</b><span>average loss under Republican presidents</span></div>
 </div>
 
+<h2>The House going into 2027</h2>
+<p>All 435 House seats were on the ballot on November 3, 2026. By the Associated Press count, 48 seats changed party: Democrats flipped 45 and Republicans flipped 3. Ten races are still undecided, including two Louisiana seats headed to a December 12 runoff.</p>
+<p><b>Term length:</b> 2 years, so every seat is on the ballot every election. <b>Term limits:</b> none. <b>Seats per state</b> are set by population after each census; the total has been fixed at 435 since 1913.</p>
+<div class="stats3">
+<div class="stat"><b style="color:var(--blue)">256</b><span>Democrats</span></div>
+<div class="stat"><b style="color:var(--red)">169</b><span>Republicans</span></div>
+<div class="stat"><b>10</b><span>Undecided</span></div>
+</div>
+<p class="hint">Each square is one state. The colors show its 2027 delegation, Democrats on the left, Republicans on the right, undecided seats in between. The number is the state's seat count. Tap a state for details.</p>
+<div class="lg2">
+<span><span class="sw" style="background:#2a78d6"></span>Democratic seats</span>
+<span><span class="sw" style="background:#e34948"></span>Republican seats</span>
+<span><span class="sw" style="background:repeating-linear-gradient(45deg,#d3d1c7,#d3d1c7 2px,#888780 2px,#888780 3px)"></span>Undecided</span>
+<span><span class="sw" style="background:#2a78d6"><span style="position:absolute;top:1px;right:1px;width:4px;height:4px;border-radius:50%;background:#fff"></span></span>At least one seat flipped</span>
+</div>
+<div class="hm" id="hm" role="group" aria-label="Tile map of all 50 states showing each state's House delegation going into 2027"></div>
+<div id="hinfo" aria-live="polite">Tap any state to see its House delegation.</div>
+
 <h2>Every midterm since 1858</h2>
 <p class="hint">Tap or hover over any bar to see percentage points and actual seats.</p>
 <div class="legend">
 <span><span class="sw" style="background:var(--blue)"></span>Democratic president (D)</span>
 <span><span class="sw" style="background:var(--red)"></span>Republican president (R)</span>
 </div>
-<div class="chart"><canvas id="c" role="img" aria-label="Change in the president's party's share of House seats at each midterm from 1858 to 2022. 37 of 41 are losses. 2026 results pending.">The president's party lost House share in 37 of 41 midterms since 1858.</canvas></div>
+<div class="chart"><canvas id="c" role="img" aria-label="Change in the president's party's share of House seats at each midterm from 1858 to 2022. 37 of 41 are losses. 2026 preliminary: minus 10.6 points.">The president's party lost House share in 37 of 41 midterms since 1858.</canvas></div>
 <p class="fine" style="margin-top:10px">See the Senate version: <a href="senate.html">midterms.timenowdata.app/senate.html</a> · <a href="./">All charts</a></p>
 
 <h2>Why percentages instead of seats?</h2>
@@ -84,33 +119,78 @@ ul{padding-left:20px;margin:0 0 14px}
 <h2>The exceptions</h2>
 <p>Only four midterms bucked the pattern in the House: 1878 (Hayes), 1934 (Franklin Roosevelt, during the New Deal), 1998 (Clinton) and 2002 (George W. Bush, after 9/11).</p>
 
-<h2>Tonight</h2>
-<p>With a Republican in the White House, 160 years of history points to Democratic gains. If Republicans hold their ground, they'll have beaten long odds. Either way, the 2026 bar goes at the top of the chart once the results are in. Close races can take days or weeks to call, so check back.</p>
+<h2>The 2026 bar (preliminary)</h2>
+<p>History held. Counting called races plus the current leaders in eight uncalled races, President Trump's party lost about 47 House seats in 2026, or about 10.6 points of the House. That's a bigger loss than the typical midterm (about 9 points), though smaller than 2010 (−14.7) or 1994 (−12.4). Two Louisiana seats go to a December 12 runoff, so the final number can still move a little. The bar becomes final once every state certifies its results.</p>
+
+<div class="box">
+<h2 style="margin-top:0">Coming updates</h2>
+<ul style="margin-bottom:0">
+<li><b>Alaska Senate seat:</b> updated once the race is called.</li>
+<li><b>Louisiana's two House runoffs:</b> updated after December 12, 2026.</li>
+<li><b>Final numbers:</b> the "preliminary" labels come off once states certify their results in December.</li>
+<li><b>Terms served for House members:</b> added after the new Congress is sworn in on January 3, 2027. About 100 of the 435 winners are new, so a reliable full list isn't available until then.</li>
+</ul>
+</div>
+<div class="box">
+<h2 style="margin-top:0">Why we're doing this</h2>
+<p>We're tracking career politicians and building a campaign reform plan that works for both parties and for the American people. That takes time, research and your support.</p>
+<p>In 1958, my father's one manual labor job paid $2.50 an hour: 40 hours a week, every weekend off. It paid for the brand-new two-story brick home he built by hand in Schenectady, New York, with a full basement and a rental apartment upstairs, on a 20-year mortgage. It came with company-paid health care and retirement for a family of five. It kept Mom home raising three young kids, with home-cooked meals and Dad at the other end of the dinner table at 6 o'clock every night. Mom was the homework wizard. Dad was the disciplinarian, following Mom's instructions, because she was home with us all day. A late-model car sat in the garage, and 10% of every paycheck went into savings, because credit cards didn't exist. No government help of any kind.</p>
+<p>I remember. I was six, the oldest of three. I believed that world would be even better for the next generation. Instead, it got worse. Much worse. Now we're pulling back the curtain to show you why.</p>
+<p><b>By our estimate, it takes about $80 an hour to afford that same life today.</b> We show the receipts. You decide.</p>
+<p class="fine">About the $80 estimate: it's our calculation of what one 40-hour-a-week earner needs today for the same life: a brand-new home on a 20-year mortgage, a parent at home raising three kids, and no government benefits. It's not an official statistic. Adjusted only for official inflation, $2.50 in 1958 is roughly $28 today, but the Bureau of Labor Statistics itself says its Consumer Price Index "differs in important ways from a complete cost-of-living measure." Our full math and sources are coming soon.</p>
+<p>Democrats campaigned largely on the affordability crisis, and voters gave them both chambers of Congress. We're holding them to that promise for the generations after the baby boom who keep getting shortchanged, and we'd hold any party to the same standard.</p>
+<p><b>Our goal: 1 million signatures from registered voters of every party.</b></p>
+<p>In 2024, Louise, a couple and their dog froze to death in paper-thin tents in Vermont, a few hundred yards from where Rebel and I were camped. That isn't about politics. It's about solutions.</p>
+<p style="margin-bottom:0">— Douglas &amp; Rebel</p>
+</div>
 
 <a class="cta" href="https://7levelsdeep.substack.com/subscribe">Subscribe to The Truth Hurts!</a>
-<p class="fine" style="text-align:center">Free to subscribe. No BS. We connect the dots, with receipts.</p>
+<p class="fine" style="text-align:center">Free to subscribe. No BS 💩. We connect the dots, with receipts.</p>
 
 <h2>Sources and method</h2>
 <ul class="fine">
 <li>Seat counts: House of Representatives and Senate historical records, as compiled by USAFacts (composition of Congress after each election, 1856&ndash;2024).</li>
 <li>Midterms only: presidential election years are excluded. Andrew Johnson's 1866 midterm is excluded because his party affiliation was ambiguous.</li>
 <li>Shares count only Democratic and Republican seats; third-party members and vacancies are left out.</li>
+<li>2027 House: current members from the @unitedstates congress-legislators dataset, updated with the 48 seat changes and 10 undecided races reported by the Associated Press as of November 14, 2026 (via California Today's results guide). The AP compares district numbers, so a few seats in states that redrew their maps are counted as flips by district number. Results are unofficial until certified.</li>
+<li>The preliminary 2026 bar counts called races plus current leaders in eight uncalled races, and leaves out the two Louisiana runoff seats.</li>
 <li>Change is measured from the composition after the previous election to the composition after the midterm.</li>
 </ul>
-<p class="fine">Published by 7 Levels Deep. Last updated November 3, 2026.</p>
+<p class="fine">Published by 7 Levels Deep. Last updated November 15, 2026.</p>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-const D=[[2026,"Trump","R",null,null,null,null],[2022,"Biden","D",-2.2,0,-9,-1],[2018,"Trump","R",-9.5,1,-42,1],[2014,"Obama","D",-3,-9.2,-13,-9],[2010,"Obama","D",-14.7,-6.1,-64,-6],[2006,"G.W. Bush","R",-7,-5.6,-30,-6],[2002,"G.W. Bush","R",1.7,1.5,8,1],[1998,"Clinton","D",0.8,0,4,0],[1994,"Clinton","D",-12.4,-9,-54,-9],[1990,"G.H.W. Bush","R",-1.8,-1,-8,-1],[1986,"Reagan","R",-0.9,-8,-4,-8],[1982,"Reagan","R",-6,1.5,-26,2],[1978,"Carter","D",-3.2,-3,-14,-3],[1974,"Ford","R",-11,-5.1,-48,-5],[1970,"Nixon","R",-2.8,1.9,-12,1],[1966,"L. Johnson","D",-10.8,-4,-47,-4],[1962,"Kennedy","D",-1,2,-6,2],[1958,"Eisenhower","R",-11.5,-14,-50,-12],[1954,"Eisenhower","R",-4.3,-1.1,-18,-1],[1950,"Truman","D",-6.5,-5.2,-28,-5],[1946,"Truman","D",-13,-13.1,-56,-12],[1942,"F. Roosevelt","D",-10.7,-10.2,-45,-9],[1938,"F. Roosevelt","D",-18.4,-7.6,-72,-7],[1934,"F. Roosevelt","D",3,11.3,9,10],[1930,"Hoover","R",-12,-8.4,-52,-8],[1926,"Coolidge","R",-2.3,-5.8,-9,-6],[1922,"Harding","R",-17.5,-5.7,-77,-6],[1918,"Wilson","D",-5.4,-7.3,-22,-7],[1914,"Wilson","D",-14.5,4.6,-61,5],[1910,"Taft","R",-14.7,-11.1,-57,-8],[1906,"T. Roosevelt","R",-7.8,1.9,-28,3],[1902,"T. Roosevelt","R",-2.9,-0.3,7,1],[1898,"McKinley","R",-8.7,10.7,-19,9],[1894,"Cleveland","D",-36.9,-4.8,-125,-4],[1890,"B. Harrison","R",-27.5,-3.3,-93,-4],[1886,"Cleveland","D",-4,3.9,-15,3],[1882,"Arthur","R",-16.7,1.4,-34,1],[1878,"Hayes","R",1.6,-9.3,-4,-7],[1874,"Grant","R",-33.2,-9,-96,-1],[1870,"Grant","R",-15.2,-7.1,-35,-6],[1862,"Lincoln","R",-16.9,9.4,-23,2],[1858,"Buchanan","D",-17.8,-7.8,-49,-3]];
+const D=[[2026,"Trump","R",-10.6,-8.2,-47,-8],[2022,"Biden","D",-2.2,0,-9,-1],[2018,"Trump","R",-9.5,1,-42,1],[2014,"Obama","D",-3,-9.2,-13,-9],[2010,"Obama","D",-14.7,-6.1,-64,-6],[2006,"G.W. Bush","R",-7,-5.6,-30,-6],[2002,"G.W. Bush","R",1.7,1.5,8,1],[1998,"Clinton","D",0.8,0,4,0],[1994,"Clinton","D",-12.4,-9,-54,-9],[1990,"G.H.W. Bush","R",-1.8,-1,-8,-1],[1986,"Reagan","R",-0.9,-8,-4,-8],[1982,"Reagan","R",-6,1.5,-26,2],[1978,"Carter","D",-3.2,-3,-14,-3],[1974,"Ford","R",-11,-5.1,-48,-5],[1970,"Nixon","R",-2.8,1.9,-12,1],[1966,"L. Johnson","D",-10.8,-4,-47,-4],[1962,"Kennedy","D",-1,2,-6,2],[1958,"Eisenhower","R",-11.5,-14,-50,-12],[1954,"Eisenhower","R",-4.3,-1.1,-18,-1],[1950,"Truman","D",-6.5,-5.2,-28,-5],[1946,"Truman","D",-13,-13.1,-56,-12],[1942,"F. Roosevelt","D",-10.7,-10.2,-45,-9],[1938,"F. Roosevelt","D",-18.4,-7.6,-72,-7],[1934,"F. Roosevelt","D",3,11.3,9,10],[1930,"Hoover","R",-12,-8.4,-52,-8],[1926,"Coolidge","R",-2.3,-5.8,-9,-6],[1922,"Harding","R",-17.5,-5.7,-77,-6],[1918,"Wilson","D",-5.4,-7.3,-22,-7],[1914,"Wilson","D",-14.5,4.6,-61,5],[1910,"Taft","R",-14.7,-11.1,-57,-8],[1906,"T. Roosevelt","R",-7.8,1.9,-28,3],[1902,"T. Roosevelt","R",-2.9,-0.3,7,1],[1898,"McKinley","R",-8.7,10.7,-19,9],[1894,"Cleveland","D",-36.9,-4.8,-125,-4],[1890,"B. Harrison","R",-27.5,-3.3,-93,-4],[1886,"Cleveland","D",-4,3.9,-15,3],[1882,"Arthur","R",-16.7,1.4,-34,1],[1878,"Hayes","R",1.6,-9.3,-4,-7],[1874,"Grant","R",-33.2,-9,-96,-1],[1870,"Grant","R",-15.2,-7.1,-35,-6],[1862,"Lincoln","R",-16.9,9.4,-23,2],[1858,"Buchanan","D",-17.8,-7.8,-49,-3]];
 const cs=getComputedStyle(document.documentElement),v=n=>cs.getPropertyValue(n).trim();
 const B=v('--blue'),R=v('--red'),muted=v('--muted'),grid=v('--line'),base=v('--base');
 const col=D.map(d=>d[2]==='D'?B:R);
 const f=x=>(x>0?'+':x<0?'−':'')+Math.abs(x).toFixed(1);
 const s=n=>n===0?'no change':(n>0?'+':'−')+Math.abs(n)+(Math.abs(n)===1?' seat':' seats');
-const pend={id:'pend',afterDatasetsDraw(c){const y=c.scales.y.getPixelForValue(0),x=c.scales.x.getPixelForValue(0),ctx=c.ctx;ctx.save();ctx.font='italic 13px sans-serif';ctx.fillStyle=R;ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillText('Results pending',x-6,y);ctx.restore();}};
+const pend={id:'pend',afterDatasetsDraw(c){const m=c.getDatasetMeta(0).data[0];const ctx=c.ctx;ctx.save();ctx.font='italic 13px sans-serif';ctx.fillStyle=R;ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillText('Preliminary',m.x-6,m.y);ctx.restore();}};
 new Chart(document.getElementById('c'),{type:'bar',plugins:[pend],data:{labels:D.map(d=>d[0]+'  '+d[1]+' ('+d[2]+')'),datasets:[{data:D.map(d=>d[3]),backgroundColor:col,borderRadius:3,barThickness:15}]},
 options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{padding:10,titleFont:{size:14},bodyFont:{size:14},filter:i=>D[i.dataIndex][3]!==null,callbacks:{title:i=>{const d=D[i[0].dataIndex];return d[0]+' · '+d[1]+' ('+d[2]+')'},label:i=>{const d=D[i.dataIndex];return['House: '+f(d[3])+' pts ('+s(d[5])+')','Senate: '+f(d[4])+' pts ('+s(d[6])+')']}}}},
 scales:{x:{min:-40,max:5,grid:{color:c=>c.tick.value===0?base:grid},ticks:{color:muted,font:{size:12},callback:x=>x+' pts'}},y:{grid:{display:false},ticks:{color:c=>col[c.index],font:{size:12},autoSkip:false}}}}});
+</script>
+<script>
+const HS=[["AK", "Alaska", 0, 0, 1, 0, 0, 1, 0, 1, 0, "", "", "AK at-large"], ["AL", "Alabama", 7, 6, 7, 2, 5, 0, 2, 5, 0, "", "", ""], ["AR", "Arkansas", 5, 5, 4, 0, 4, 0, 0, 4, 0, "", "", ""], ["AZ", "Arizona", 2, 5, 9, 5, 4, 0, 3, 6, 0, "AZ-1, AZ-6", "", ""], ["CA", "California", 1, 4, 52, 48, 3, 1, 43, 8, 1, "CA-1, CA-3, CA-22, CA-41, CA-48", "", "CA-23"], ["CO", "Colorado", 3, 4, 8, 7, 1, 0, 4, 4, 0, "CO-4, CO-5, CO-8", "", ""], ["CT", "Connecticut", 10, 3, 5, 5, 0, 0, 5, 0, 0, "", "", ""], ["DE", "Delaware", 10, 4, 1, 1, 0, 0, 1, 0, 0, "", "", ""], ["FL", "Florida", 9, 7, 28, 8, 20, 0, 8, 20, 0, "", "", ""], ["GA", "Georgia", 8, 6, 14, 5, 9, 0, 5, 9, 0, "", "", ""], ["HI", "Hawaii", 0, 7, 2, 2, 0, 0, 2, 0, 0, "", "", ""], ["IA", "Iowa", 5, 3, 4, 3, 1, 0, 0, 4, 0, "IA-1, IA-2, IA-3", "", ""], ["ID", "Idaho", 2, 2, 2, 0, 2, 0, 0, 2, 0, "", "", ""], ["IL", "Illinois", 6, 2, 17, 14, 3, 0, 14, 3, 0, "", "", ""], ["IN", "Indiana", 6, 3, 9, 3, 6, 0, 2, 7, 0, "IN-5", "", ""], ["KS", "Kansas", 4, 5, 4, 1, 3, 0, 1, 3, 0, "", "", ""], ["KY", "Kentucky", 6, 4, 6, 2, 4, 0, 1, 5, 0, "KY-6", "", ""], ["LA", "Louisiana", 5, 6, 6, 1, 3, 2, 2, 4, 0, "", "", "LA-5, LA-6"], ["MA", "Massachusetts", 10, 2, 9, 9, 0, 0, 9, 0, 0, "", "", ""], ["MD", "Maryland", 9, 4, 8, 7, 1, 0, 7, 1, 0, "", "", ""], ["ME", "Maine", 11, 0, 2, 1, 1, 0, 2, 0, 0, "", "ME-2", ""], ["MI", "Michigan", 7, 2, 13, 9, 4, 0, 6, 7, 0, "MI-4, MI-7, MI-10", "", ""], ["MN", "Minnesota", 5, 2, 8, 4, 3, 1, 4, 4, 0, "", "", "MN-1"], ["MO", "Missouri", 5, 4, 8, 3, 5, 0, 2, 6, 0, "MO-2", "", ""], ["MS", "Mississippi", 6, 6, 4, 1, 3, 0, 1, 3, 0, "", "", ""], ["MT", "Montana", 3, 2, 2, 1, 1, 0, 0, 2, 0, "MT-1", "", ""], ["NC", "North Carolina", 7, 5, 14, 9, 1, 4, 4, 10, 0, "NC-6, NC-9, NC-11, NC-13, NC-14", "", "NC-3, NC-5, NC-7, NC-10"], ["ND", "North Dakota", 4, 2, 1, 0, 1, 0, 0, 1, 0, "", "", ""], ["NE", "Nebraska", 4, 4, 3, 1, 2, 0, 0, 3, 0, "NE-2", "", ""], ["NH", "New Hampshire", 11, 1, 2, 2, 0, 0, 2, 0, 0, "", "", ""], ["NJ", "New Jersey", 9, 3, 12, 11, 1, 0, 9, 3, 0, "NJ-2, NJ-7", "", ""], ["NM", "New Mexico", 3, 5, 3, 3, 0, 0, 3, 0, 0, "", "", ""], ["NV", "Nevada", 2, 3, 4, 4, 0, 0, 3, 1, 0, "NV-2", "", ""], ["NY", "New York", 9, 2, 26, 20, 6, 0, 19, 7, 0, "NY-17", "", ""], ["OH", "Ohio", 7, 3, 15, 8, 7, 0, 5, 10, 0, "OH-7, OH-10, OH-15", "", ""], ["OK", "Oklahoma", 4, 6, 5, 0, 5, 0, 0, 5, 0, "", "", ""], ["OR", "Oregon", 1, 3, 6, 5, 1, 0, 5, 1, 0, "", "", ""], ["PA", "Pennsylvania", 8, 3, 17, 11, 6, 0, 7, 10, 0, "PA-1, PA-7, PA-8, PA-10", "", ""], ["RI", "Rhode Island", 11, 3, 2, 2, 0, 0, 2, 0, 0, "", "", ""], ["SC", "South Carolina", 8, 5, 7, 2, 5, 0, 1, 6, 0, "SC-1", "", ""], ["SD", "South Dakota", 4, 3, 1, 0, 1, 0, 0, 1, 0, "", "", ""], ["TN", "Tennessee", 6, 5, 9, 0, 8, 1, 1, 8, 0, "", "TN-9", "TN-4"], ["TX", "Texas", 4, 7, 38, 14, 24, 0, 13, 25, 0, "TX-15, TX-23", "TX-32", ""], ["UT", "Utah", 2, 4, 4, 1, 3, 0, 0, 4, 0, "UT-1", "", ""], ["VA", "Virginia", 8, 4, 11, 8, 3, 0, 6, 5, 0, "VA-1, VA-2", "", ""], ["VT", "Vermont", 10, 1, 1, 1, 0, 0, 1, 0, 0, "", "", ""], ["WA", "Washington", 1, 2, 10, 8, 2, 0, 8, 2, 0, "", "", ""], ["WI", "Wisconsin", 6, 1, 8, 4, 4, 0, 2, 6, 0, "WI-1, WI-3", "", ""], ["WV", "West Virginia", 7, 4, 2, 0, 2, 0, 0, 2, 0, "", "", ""], ["WY", "Wyoming", 3, 3, 1, 0, 1, 0, 0, 1, 0, "", "", ""]];
+const hm=document.getElementById('hm'),hi=document.getElementById('hinfo');
+const hg=Array(96).fill(null);HS.forEach(r=>{hg[r[3]*12+r[2]]=r});
+let hsel=null;
+hg.forEach(r=>{
+ if(!r){hm.appendChild(document.createElement('div'));return}
+ const [st,nm,x,y,n,d,rr,p,d0,r0,i0,fd,fr,pd]=r;
+ const b=document.createElement('button');b.className='t3'+((fd||fr)?' fl':'');
+ b.setAttribute('aria-label',nm+': '+n+' seats, '+d+' Democratic, '+rr+' Republican'+(p?', '+p+' undecided':''));
+ [['D',d],['P',p],['R',rr]].forEach(([k,v])=>{if(!v)return;const s=document.createElement('span');s.className='seg '+k;s.style.width=(v/n*100)+'%';b.appendChild(s)});
+ const l=document.createElement('span');l.className='lab';l.innerHTML='<b>'+st+'</b><i>'+n+'</i>';b.appendChild(l);
+ b.onclick=()=>{if(hsel)hsel.classList.remove('sel');b.classList.add('sel');hsel=b;
+  let t='<b>'+nm+'</b> · '+n+(n===1?' seat (at-large)':' seats')+'<br><span style="font-size:15px">2027: <b>'+d+' D</b> · <b>'+rr+' R</b>'+(p?' · '+p+' undecided':'')+'</span>';
+  t+='<br><span style="font-size:15px">Before the election: '+d0+' D · '+r0+' R'+(i0?' · '+i0+' I':'')+'</span>';
+  if(fd)t+='<br><span style="font-size:15px">Flipped to Democrats: '+fd+'</span>';
+  if(fr)t+='<br><span style="font-size:15px">Flipped to Republicans: '+fr+'</span>';
+  if(pd)t+='<br><span style="font-size:15px">Undecided: '+pd+'</span>';
+  hi.innerHTML=t};
+ hm.appendChild(b)});
 </script>
 </body>
 </html>
